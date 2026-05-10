@@ -13,7 +13,7 @@ click==8.1.8
 colorama==0.4.6
 coloredlogs==15.0.1
 cryptography==44.0.2
-ctranslate2 ==4.6.0
+ctranslate2
 fanstatic==1.5
 faster-whisper==1.1.1
 filelock==3.18.0
