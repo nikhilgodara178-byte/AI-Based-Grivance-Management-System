@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const url = 'https://nlp-translation.p.rapidapi.com/v1/jsontranslate';
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'x-rapidapi-host': 'nlp-translation.p.rapidapi.com',
+                'x-rapidapi-key': '59f0518e3fmsh380d8f41d027e1ap109908jsnfd2ace88c9a9'
+            },
+            body: new URLSearchParams({
+                text: 'मैं अंतिम वर्ष का छात्र हूँ और अपने रिसर्च प्रोजेक्ट पर काम कर रहा हूँ, लेकिन मुझे प्रयोगशाला के उपकरणों तक सही ढंग से पहुँच नहीं दी गई है।',
+                to: 'en',
+                from: 'auto'
+            })
+        };
+
+        fetch(url, options)
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.error('Error:', err));
+
+    </script>
+</body>
+
+</html>

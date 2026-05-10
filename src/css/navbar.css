@@ -1,0 +1,119 @@
+.sidebar {
+    width: 270px;
+    height: 97vh; 
+    background-color: #fffefb;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    font-family: sans-serif;
+    border-radius: 9px;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+  }
+  
+  .logo {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .brand-text h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .brand-text p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #555;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+  }
+  
+  .nav-links li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 0.95rem;
+    color: #868686;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 5px;
+  }
+  
+  .nav-links li:hover {
+    color: #000;
+  }
+  
+  .nav-links li svg {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  .logout {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.95rem;
+    color: #222;
+    /* margin-bottom: 10px; */
+    color: rgb(221, 0, 0);
+  }
+  
+  .logout svg {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .logout span {
+    cursor: pointer;
+  }
+  
+
+  .login-btn, .signup-btn{
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 80%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .signup-btn{
+    background-color: black;
+    color: white;
+    border: solid rgb(0, 0, 0) 0.5px;
+  }
+
+  .signup-btn:hover{
+    background-color: rgb(52, 52, 52);
+  }
+
+  .login-btn{
+    background-color: white;
+    border: solid gray 0.5px;
+    border-radius: 8px;
+  }
+
+  .button-cont-nav{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .active>li{
+    color: black;
+    background-color: rgb(244, 244, 244);
+  }

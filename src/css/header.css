@@ -1,0 +1,44 @@
+.header-cont {
+    width: 100%;
+    height: 60px;
+    /* border: solid black 1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.header-cont > div{
+    /* border: solid black 2px; */
+    width: 94%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-grievance-button{
+    display: flex;
+    gap: 10px;
+    height: 90%;
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.add-grievance-button:hover{
+    background-color: rgb(52, 52, 52);
+}
+
+.add-grievance-button > img {
+    width: 25px;
+    filter: invert(100%);
+}
+
+.header-text > h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
