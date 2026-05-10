@@ -73,7 +73,7 @@ const NewGrievanceForm = () => {
       const wavBlob = await blobToWav(blob);
 
       let formdata = new FormData()
-      formdata.append("file", wavBlob, "audio.webm");
+      formdata.append("file", wavBlob, "audio.wav");
       formdata.append("language", language)
 
       setIsloading(true)

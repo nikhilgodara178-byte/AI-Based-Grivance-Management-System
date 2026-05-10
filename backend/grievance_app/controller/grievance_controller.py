@@ -34,7 +34,9 @@ class GrievanceController:
         
         c_id = commitee_name_to_c_id[comittee]
         title = data['title']
-        audio = file['blob'].read()
+        audio = None
+        if 'blob' in file:
+            audio = file['blob'].read()
 
         res, grievance = GrievanceService.add_grievance(u_id,c_id,desc,title,audio,language)
         if res:
