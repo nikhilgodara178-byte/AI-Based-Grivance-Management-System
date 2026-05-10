@@ -49,7 +49,7 @@ function App() {
       path: "/settings",
       element: <SettingsPage/>
     },
-  ])
+  ], { basename: '/AI-Based-Grivance-Management-System' })
 
   return (
     <>
