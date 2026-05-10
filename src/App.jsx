@@ -1,7 +1,7 @@
 import './App.css'
 import UserHomePage from './page/userHomePage'
 import AddgrievancePage from './page/addgrievancePage'
-import Profilepage from './page/profilepage'
+import Profilepage from './page/profilePage'
 import Userdashboard from './page/userdashboard.jsx'
 import SettingsPage from './page/settingsPage.jsx'
 import LoginPage from './page/loginPage'
