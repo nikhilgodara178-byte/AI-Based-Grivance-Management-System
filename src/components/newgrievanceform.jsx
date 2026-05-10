@@ -1,4 +1,5 @@
 import React, { useState, useRef, useContext } from 'react';
+import { API } from '../config/api';
 import "../css/newgrievanceform.css";
 import toWav from 'audiobuffer-to-wav';
 import MicNoneIcon from '@mui/icons-material/MicNone';
@@ -37,7 +38,7 @@ const NewGrievanceForm = () => {
     formdata.append('comittee', assignedTo)
     formdata.append('u_id', User.u_id)
     formdata.append("language", language)
-    let res = await fetch("http://127.0.0.1:5001/add_grievance", {
+    let res = await fetch(`${API.GRIEVANCE}/add_grievance`, {
       method: "POST",
       body: formdata
     })
@@ -76,7 +77,7 @@ const NewGrievanceForm = () => {
       formdata.append("language", language)
 
       setIsloading(true)
-      let res = await fetch("http://127.0.0.1:5001/speechToText", {
+      let res = await fetch(`${API.GRIEVANCE}/speechToText`, {
         method: 'POST',
         body: formdata
       })

@@ -1,4 +1,5 @@
 import React, { useCallback, useContext, useState } from 'react';
+import { API } from '../config/api';
 import {
   Box,
   Typography,
@@ -48,7 +49,7 @@ const Profile = () => {
         email: email,
         phone: phone
       }
-      let res = await fetch("http://127.0.0.1:5000/update", {
+      let res = await fetch(`${API.USER}/update`, {
         method: 'PUT',
         headers: {
           "Content-Type": "application/json",

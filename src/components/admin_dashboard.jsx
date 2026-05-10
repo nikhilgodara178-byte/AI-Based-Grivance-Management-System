@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { API } from '../config/api';
 import {
   Box,
   Container,
@@ -87,7 +88,7 @@ const AdminDashboard = () => {
   const [monthlyData, setmonthlyData] = useState([])
 
   const fetch_bar_plot_data = async () => {
-    let res = await fetch(`http://127.0.0.1:5002/grievanceCategory/${reportType}/${timeRange}`)
+    let res = await fetch(`${API.ADMIN}/grievanceCategory/${reportType}/${timeRange}`)
     if (res.ok) {
       let data = await res.json()
       setcategoryData(data)
@@ -95,7 +96,7 @@ const AdminDashboard = () => {
   }
 
   const fetch_state_card_data = async () => {
-    let res = await fetch(`http://127.0.0.1:5002/get_data_statcard`)
+    let res = await fetch(`${API.ADMIN}/get_data_statcard`)
     if (res.ok) {
       let data = await res.json()
       setstateCard(data)
@@ -103,7 +104,7 @@ const AdminDashboard = () => {
   }
 
   const fetch_monthly_data = async() => {
-    let res = await fetch(`http://127.0.0.1:5002/get_line_graph_data/${timeRange}`)
+    let res = await fetch(`${API.ADMIN}/get_line_graph_data/${timeRange}`)
     if (res.ok) {
       let data = await res.json()
       setmonthlyData(data)

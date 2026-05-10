@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { API } from '../config/api';
 import {
   Box,
   Container,
@@ -255,7 +256,7 @@ const AdminComplain = () => {
   };
 
   const fetch_complains = async() => {
-    let res = await fetch("http://127.0.0.1:5002/get_all_grievance")
+    let res = await fetch(`${API.ADMIN}/get_all_grievance`)
     if(res.ok){
       let data = await res.json()
       setmockComplaints(data)

@@ -1,4 +1,5 @@
 import React, { useEffect,useState,useContext } from 'react';
+import { API } from '../config/api';
 import {
   Box,
   Grid,
@@ -87,7 +88,7 @@ const Dashboard = () => {
   // ];
 
   const fetch_stats_data = async() =>{
-    let res = await fetch(`http://127.0.0.1:5000/get_data_statcard/${User.u_id}`)
+    let res = await fetch(`${API.USER}/get_data_statcard/${User.u_id}`)
     if (res.ok) {
       let stats_data = await res.json()
       setstats(stats_data)
@@ -95,7 +96,7 @@ const Dashboard = () => {
   }
 
   const fetch_recent_acivity_data = async () =>{
-    let res = await fetch(`http://127.0.0.1:5000/grievance/kpi_report/${User.u_id}`)
+    let res = await fetch(`${API.USER}/grievance/kpi_report/${User.u_id}`)
     if(res.ok){
       let data = await res.json()
       setacivity(data)

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { API } from '../config/api';
 import GrievanceCard from './grievanceCard'
 import "../css/grievancelist.css"
 import refreshIcon from "/refreash.svg"
@@ -32,7 +33,7 @@ const Grienvancelist = () => {
   const [openDialog, setOpenDialog] = useState(false)
 
   const get_all_grievance = async () => {
-    let res = await fetch(`http://127.0.0.1:5001/get_all_grievance/${User.u_id}`)
+    let res = await fetch(`${API.GRIEVANCE}/get_all_grievance/${User.u_id}`)
     if (res.ok) {
       res = await res.json()
       setGrievances(res)

@@ -3,6 +3,7 @@ import '../css/loginPage.css';
 import { useForm } from 'react-hook-form';
 import { userContext } from '../context/usercontext';
 import { useNavigate } from 'react-router-dom';
+import { API } from '../config/api';
 
 
 export default function AuthPanel() {
@@ -26,7 +27,7 @@ export default function AuthPanel() {
   const onSignUpSubmit = useCallback(async (data) => {
     try {
       console.log('SignUp Data:', data);
-      const response = await fetch("http://127.0.0.1:5000/signup", {
+      const response = await fetch(`${API.USER}/signup`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +58,7 @@ export default function AuthPanel() {
     try {
       let response
       if (data.isAdmin) {
-        response = await fetch("http://127.0.0.1:5002/login", {
+        response = await fetch(`${API.ADMIN}/login`, {
           method: 'POST',
           headers: {
             "Content-Type": "application/json",
@@ -65,7 +66,7 @@ export default function AuthPanel() {
           body: JSON.stringify(data)
         });
       } else {
-        response = await fetch("http://127.0.0.1:5000/login", {
+        response = await fetch(`${API.USER}/login`, {
           method: 'POST',
           headers: {
             "Content-Type": "application/json",

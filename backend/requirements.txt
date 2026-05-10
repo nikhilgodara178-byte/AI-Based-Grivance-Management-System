@@ -2,7 +2,7 @@ absl-py==2.2.2
 alembic==1.13.2
 annotated-types==0.7.0
 astunparse==1.6.3
-av==14.3.0
+av
 beautifulsoup4==4.13.4
 blinker==1.8.2
 cachetools==5.5.2
@@ -122,4 +122,4 @@ urllib3==2.4.0
 WebOb==1.8.9
 Werkzeug==3.0.4
 wheel==0.45.1
-wrapt==1.17.2
+wrapt==1.17.2gunicorn==21.2.0
