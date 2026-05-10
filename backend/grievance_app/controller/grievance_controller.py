@@ -31,6 +31,8 @@ class GrievanceController:
 
         if data["comittee"] not in commitee_name_to_c_id:
             comittee = MLmodelsClass.grievance_classification(desc,language)
+            if comittee not in commitee_name_to_c_id:
+                comittee = "general facility" # Fallback if AI fails (e.g. OOM on Render)
         
         c_id = commitee_name_to_c_id[comittee]
         title = data['title']
